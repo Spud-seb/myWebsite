@@ -1,74 +1,104 @@
 <html>
 <head>
   <style>
-     body{
+     body {
          text-align: center;
          background-image: linear-gradient(rgb(13, 175, 177), rgb(222, 222, 222));
          min-width: 100%;
          min-height: 100%;
       }
-      
+
       .bn13 {
-  display: inline-block;
-  padding: 0.65em 1.6em;
-  border: 3px solid #ffffff;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: #ffffff;
-  text-align: center;
-  transition: all 0.2s;
-  animation: bn13bouncy 5s infinite linear;
-  position: relative;
-}
+          display: inline-block;
+          padding: 0.65em 1.6em;
+          border: 3px solid #ffffff;
+          margin: 0 0.3em 0.3em 0;
+          border-radius: 0.12em;
+          box-sizing: border-box;
+          text-decoration: none;
+          font-family: "Roboto", sans-serif;
+          font-weight: 300;
+          color: #ffffff;
+          text-align: center;
+          transition: all 0.2s;
+          animation: bn13bouncy 5s infinite linear;
+          position: relative;
+      }
 
-.bn13:hover {
-  background-color: white;
-  color: #000000;
-}
+      .bn13:hover {
+          background-color: white;
+          color: #000000;
+      }
 
-@keyframes bn13bouncy {
-  0% {
-    top: 0em;
-  }
-  40% {
-    top: 0em;
-  }
-  43% {
-    top: -0.9em;
-  }
-  46% {
-    top: 0em;
-  }
-  48% {
-    top: -0.4em;
-  }
-  50% {
-    top: 0em;
-  }
-  100% {
-    top: 0em;
-  }
-}
-      
+      @keyframes bn13bouncy {
+          0% {
+              top: 0em;
+          }
+          40% {
+              top: 0em;
+          }
+          43% {
+              top: -0.9em;
+          }
+          46% {
+              top: 0em;
+          }
+          48% {
+              top: -0.4em;
+          }
+          50% {
+              top: 0em;
+          }
+          100% {
+              top: 0em;
+          }
+      }
+
+      /* Image hover change */
+      .image-container {
+          position: relative;
+          display: inline-block;
+      }
+
+      .image-container img {
+          width: 400px;
+          height: auto;
+          transition: opacity 0.3s ease-in-out;
+      }
+
+      .image-container img:hover {
+          opacity: 0;
+      }
+
+      .image-container:hover .image-hover {
+          opacity: 1;
+      }
+
+      .image-hover {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 400px;
+          height: auto;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+
   </style>
 </head>
 
 <body>
-<h1><big><big></big>LËKKËR</big></big></h1>
+<h1><big><big>LËKKËR</big></big></h1>
 
-<h2>
-lekker clothing brand
-
-</h2>
+<h2>lekker clothing brand</h2>
 
 <a href="https://eu.stussy.com/collections/tees?page=2" class="bn13">inspiration</a> <br>
-  
 
-  <img src="hi.png" width="400px">
+<!-- Image container with hover effect -->
+<div class="image-container">
+    <img src="hi.png" alt="Original Image">
+    <img src="hover-image.png" alt="Hover Image" class="image-hover">
+</div>
+
 </body>
-
 </html>
